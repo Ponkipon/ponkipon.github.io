@@ -1,0 +1,268 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@keyframes animateSectionBackground {
+  00%, 24% { background-image: url(../images/bg-1.jpg); }
+  25%, 49% { background-image: url(../images/bg-2.jpg); }
+  50%, 74% { background-image: url(../images/bg-3.jpg); }
+  75%, 99% { background-image: url(../images/bg-4.jpg); }
+}
+
+body{
+  background-color: black;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+  &::before {
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      z-index: -1;
+      animation: animateSectionBackground infinite 60s;
+    }
+}
+
+html {
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+}
+
+.container {
+  background-color: rgb(14, 14, 14);;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0px 10px 20px -10px black;
+  min-height:100%;
+}
+
+.header {
+  padding-top: 0px;
+  max-height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.bottom__border {
+  border-bottom: 2px double white;
+}
+
+.top__border {
+  border-top: 2px double white;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  height: 60px;
+}
+
+.header__logo {
+  font-size: 32px;
+  text-decoration: none;
+  color: #fff;
+  max-height: 40px;
+  width: auto;
+}
+
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__search {
+  padding: 6px;
+  border: 2px solid rgb(14,14, 14);;
+  border-radius: 5px;
+  outline: none;
+}
+
+.footer__logo {
+  font-size: 32px;
+  text-decoration: none;
+  color: #fff;
+  max-height: 40px;
+  width: auto;
+}
+
+.footer__logo:hover {
+  opacity: 0.8;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer__content {
+  padding: 16px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer__info {
+  text-decoration: none;
+  font-size: 12px;
+  color: grey;
+}
+
+.footer__logo--container {
+  align-items: center;
+  padding: 16px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.accent {
+  color:rgb(0, 216, 144);
+}
+
+.backdrop__styles {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.movie__backdrop {
+  height: 100%;
+  width: 100%;
+}
+
+.movie__backdrop--darkened {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(${`https://image.tmdb.org/t/p/original/${detResp.backdrop_path}`});
+  background: linear-gradient(0deg, rgba(29, 31, 31, 1) 13%, rgba(0, 0, 0, 0) 100%);
+}
+
+.movie__info {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 40px;
+  color: white;
+  padding-bottom: 40px;
+}
+
+.movie__poster {
+  width: 250px;
+  height: auto;
+}
+
+.movie__info--text {
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.movie__tagline,
+.movie__genre,
+.movie__runtime,
+.movie__rating,
+.movie__overview,
+.movie__budget,
+.movie__companies {
+  margin-bottom: 10px;
+}
+
+.movie__overview {
+  padding-top: 20px;
+}
+
+h1 {
+  color: white;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.scroll__button {
+  display: none;
+  background-color: #1d1f1f;
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  right: 0;
+  bottom: 0;
+  margin: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: rgb(179, 179, 179);
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 0px 30px #363636;
+  z-index: 2;
+}
+
+.arrow__top {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll__button:hover {
+  background-color: #393a3a;
+  color: white;
+}
+
+.header__search--form {
+  position: relative;
+  width: 300px;
+  margin: 0;
+  background: #ffffff;
+  border-bottom: 4px solid rgb(255, 94, 0);
+  border-radius: 5px;
+}
+
+.header__search,
+.header__search--button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.header__search {
+  width: 100%;
+  height: 36px;
+  padding-left: 15px;
+}
+
+.header__search--button {
+  height: 36px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.header__search--button:before {
+  content: "\2192";
+  font-size: 24px;
+  color: rgb(255, 94, 0);
+}
+
+.header__language {
+  text-decoration: none;
+  height: 32px;
+  width: auto;
+  margin-left: 8px;
+}
+
+.header__language:hover {
+  opacity: 0.8;
+}

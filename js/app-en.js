@@ -107,7 +107,7 @@ async function openpopup(movieId) {
     newwinow.classList.add("popup--show");
     document.body.classList.add("stop--scrolling");
     newwinow.innerHTML = `<div class="popup__card">    
-        <iframe max-height="350" src="https://www.youtube-nocookie.com/embed/${videoId}?controls=0&autoplay=1" title="YouTube video player" allow="autoplay" frameborder="0"></iframe>
+        <iframe height="350" src="https://www.youtube-nocookie.com/embed/${videoId}?controls=0&autoplay=1" title="YouTube video player" allow="autoplay" frameborder="0"></iframe>
             <h2 class="popup__center">
             <span class="popup__movie--title">${detResp.title}</span> 
         </h2>

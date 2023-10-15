@@ -13,7 +13,6 @@
 
 body{
     background-color: black;
-    font-family: 'Nanum Gothic Coding', monospace;
     height: 100%;
     &::before {
         background-repeat: no-repeat;
@@ -30,8 +29,9 @@ body{
 }
 
 html {
-    font-family: 'Nanum Gothic Coding', monospace;
     height: 100%;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-family: 'Oswald', sans-serif;
 }
 
 

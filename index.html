@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Oswald&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/headlogo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <title>Cinema theater web-portal</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container bottom__border">
+            <div class="header__content">
+                <form class="header__search--form">
+                    <input type="text" class="header__search" placeholder="Search"></input>
+                </form>
+                <a href="index.html" class="header__logo"> <img class="header__logo" src="./images/logo.png" alt=""> </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="movies">
+        </div>
+        <div class="number">
+            <div class="number__elements">
+                <button type="button" class="number__prev"><</button>
+                <button type="button" class="number__button number__active number__first">1</button>
+                <button type="button" class="number__button">2</button>
+                <button type="button" class="number__button">3</button>
+                <button type="button" class="number__button">4</button>
+                <button type="button" class="number__button">5</button>
+                <button type="button" class="number__next">></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup">
+    </div>
+
+    <div class="scroll">
+        <p class="fa fa-angle-double-up arrow__top"></p>
+    </div>
+
+    <div id="player"></div>
+
+    <script src="./js/app-en.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container top__border">
+        <div class="footer__content">
+            <p class="footer__info">Movie catalog Website</p>            
+            <p class="footer__info">Mykhailo Matiushchenko</p>
+            <a class="footer__info" href="https://www.themoviedb.org/">Data provider</a>
+        </div>
+    </div>
+</footer>
+
+</html>
